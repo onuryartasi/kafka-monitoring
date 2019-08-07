@@ -4,7 +4,7 @@
 wget http://www-eu.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz -P /tmp/
 sudo tar -zxvf /tmp/kafka_2.11–1.1.0.tgz -C /opt/
 sudo ln -s /opt/kafka_2.11–1.1.0 /opt/kafka
-cp ./kafka-run-class.sh /opt/kafka/bin/
+cp ./kafka-server-start.sh /opt/kafka/bin/
 ```
 
 ### INSTALL JMX EXPORTER
