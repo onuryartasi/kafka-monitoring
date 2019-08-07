@@ -12,6 +12,12 @@ cp ./kafka-run-class.sh /opt/kafka/bin/
     git clone https://github.com/onuryartasi/kafka-monitoring
     cd kafka-monitoring
     cp -r ./prometheus /opt/kafka/
+    
+### ad args kafka-server-start.sh 
+#prometheus jvm
+EXTRA_ARGS="-javaagent:/opt/kafka/prometheus/jmx_prometheus_javaagent-0.9.jar=7071:/opt/kafka/prometheus/kafka-2_0_0.yml"
+EXTRA_ARGS=${EXTRA_ARGS-'-name kafkaServer -loggc'}
+
 
 ### INSTALL PROMETHEUS
 
